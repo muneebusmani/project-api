@@ -1,4 +1,4 @@
-1. **Users**
+1. **Users Account**
 
     - `id`: Primary key
     - `username`: Unique username
@@ -51,14 +51,21 @@
 
     - `id`: Primary key
     - `user_id`: Foreign key to Users table
-    - `created_at`: Timestamp of cart creation
+    - `created_at`: Timestamp of item addition
     - `updated_at`: Timestamp of last update
+      <!--
+          We can link user and shopping cart   together via inner join
+          join User account and shopping cart on the basis of id in user table and user_id foreign key in Shopping cart
+          and about Shopping cart and cart items:
+          join both tables on the basis of  id of Shopping cart and cart_id foreign key of Cart items
+            -->
 
 7. **Cart Items**
 
     - `id`: Primary key
-    - `cart_id`: Foreign key to Shopping Cart table
+    - `cart_id`: Foreign key to Shpping cart table
     - `watch_id`: Foreign key to Watches table
+    - `price`: Price
     - `quantity`: Quantity of the watch
     - `created_at`: Timestamp of item addition
     - `updated_at`: Timestamp of last update
@@ -82,22 +89,17 @@
     - `created_at`: Timestamp of item addition
     - `updated_at`: Timestamp of last update
 
-10. **Wishlists**
+10. **Wishlist**
 
     - `id`: Primary key
     - `user_id`: Foreign key to Users table
-    - `created_at`: Timestamp of wishlist creation
-    - `updated_at`: Timestamp of last update
-
-11. **Wishlist Items**
-
-    - `id`: Primary key
-    - `wishlist_id`: Foreign key to Wishlists table
     - `watch_id`: Foreign key to Watches table
+    - `price`: Price
+    - `stock`: Stock availability
     - `created_at`: Timestamp of item addition
     - `updated_at`: Timestamp of last update
 
-12. **Reviews**
+11. **Reviews**
 
     - `id`: Primary key
     - `user_id`: Foreign key to Users table
@@ -107,7 +109,7 @@
     - `created_at`: Timestamp of review submission
     - `updated_at`: Timestamp of last update
 
-13. **Support Tickets**
+12. **Support Tickets**
 
     - `id`: Primary key
     - `user_id`: Foreign key to Users table
@@ -117,7 +119,7 @@
     - `created_at`: Timestamp of ticket creation
     - `updated_at`: Timestamp of last update
 
-14. **FAQ**
+13. **FAQ**
 
     - `id`: Primary key
     - `question`: FAQ question
@@ -125,7 +127,7 @@
     - `created_at`: Timestamp of FAQ addition
     - `updated_at`: Timestamp of last update
 
-15. **Feedback**
+14. **Feedback**
     - `id`: Primary key
     - `user_id`: Foreign key to Users table
     - `message`: Feedback message

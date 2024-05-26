@@ -1,0 +1,15 @@
+{
+    "src": [
+        "."
+    ],
+    "enable": [
+        "align-data",
+        "align-chains",
+        "align-comments",
+        "align-fn",
+        "blank-before-return",
+        "align-ternary",
+        "preserve-one-line",
+        "strict-expressions"
+    ]
+}

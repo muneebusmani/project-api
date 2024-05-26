@@ -76,8 +76,8 @@
 
 1. **User Profiles to Users**:
 
-    - **Many User Profiles** belong to **one User**.
-    - **One-to-One** relationship from Users to User Profiles.
+    - **One User Profile** belongs to **one User**.
+    - **One-to-One** relationship from User Profiles to User.
 
 2. **Watches to Categories**:
 
